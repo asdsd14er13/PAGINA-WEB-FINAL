@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quimica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjBkZSUyMGxhJTIwYmlibGlvdGVjYXxlbnwwfHwwfHx8MA%3D%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+		    font-weight: 400;
+		    font-size: 50px;
+		    margin-left: 10px;
+        }
+
+        .libro {
+           width: 50%;
+           max-width: 600px;
+           border-bottom: 1px solid #ccc;
+           margin: 10px;
+           padding: 10px;
+           box-sizing: border-box;
+           display:block;
+           margin:auto;
+           
+        }
+
+        .libro img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            display:block;
+            margin:auto;
+        }
+
+        .libro a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .libro a:hover {
+            background-color: #dddddd;
+        }
+        h2{
+            text-align: center;
+            color: #fff;
+            padding: 20px 0;
+            background-color: none;
+            margin: 0;  
+        }
+        .libro a {
+           text-decoration: none;
+           color: #333;
+           padding: 5px 10px;
+           background-color: #eee;
+           border-radius: 5px;
+           text-align: center;
+           margin-top: 10px;
+        }
+
+         .libro a:hover {
+           background-color: #ddd; 
+        }
+        input#searchInput {
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+
+<script>
+    function searchBooks() {
+        var input, filter, libros, libro, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        libros = document.getElementsByClassName("libro");
+
+        for (i = 0; i < libros.length; i++) {
+            libro = libros[i];
+            a = libro.getElementsByTagName("h2")[0];
+            txtValue = a.textContent || a.innerText;
+            
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                libro.style.display = "";
+            } else {
+                libro.style.display = "none";
+            }
+        }
+    }
+</script>
+</head>
+<body>
+
+    <h1>Quimica</h1>
+    <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Buscar libros">
+
+    <div class="libro">
+        <div>
+            <img src="https://imgv2-2-f.scribdassets.com/img/document/571145499/298x396/c172a8fde5/1701497724?v=1" alt="Libro 1">
+            <h2>Quimica teoria y practica de Calapenshko</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1-mD-MYtvYun3wtDwvBAP1YfbHLbQpJ4w/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://imgv2-1-f.scribdassets.com/img/document/426402105/original/acf8e1f413/1698377363?v=1" alt="Libro 2">
+            <h2>Resumen teorico de la editorial Rodo</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/12YaEye5k5iQtLpR6HjQg56ny7w_Eon5M/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://lh3.googleusercontent.com/proxy/efIidSAbh73UZzDUyHWppER1yzZ0hnC_32ZQWU2w350yanPXiKUJfd-XbGhMDIhzO1OGcpnHZBVR90q_odX29lBl3xUzKM_xKOX2CB2Ml6uDa0nyAQ5wTs0sJUXp" alt="Libro 3">
+            <h2>Quimica escencial de la editorial lumbreras</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1aLO-ju3p06B5gTUsIl-t-Oy488xtwd-O/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://lh3.googleusercontent.com/proxy/mmbwtCJGZmXpb0fn-PSX3VOWJ7K32h5WTVym1r40Qr_Fx22aDt-25ltWyVNZNySAepf5L70MNWaWWm4vckzl-OiCU_AjKCIEBcYdBsbIwbpJ3xo7elt7CVobW0BdTdRz6sKO0ex5" alt="Libro 4">
+            <h2>Compendio academico de quimica</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/18vAOFOBrAdxwrfYIEFC4dGNJXxXt8XWo/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <!-- Agrega más bloques 'libro' según sea necesario -->
+
+</body>
+</html>

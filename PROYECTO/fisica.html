@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjBkZSUyMGxhJTIwYmlibGlvdGVjYXxlbnwwfHwwfHx8MA%3D%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+		    font-weight: 400;
+		    font-size: 50px;
+		    margin-left: 10px;
+        }
+
+        .libro {
+           width: 50%;
+           max-width: 600px;
+           border-bottom: 1px solid #ccc;
+           margin: 10px;
+           padding: 10px;
+           box-sizing: border-box;
+           display:block;
+           margin:auto;
+           
+        }
+
+        .libro img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            display:block;
+            margin:auto;
+        }
+
+        .libro a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .libro a:hover {
+            background-color: #dddddd;
+        }
+        h2{
+            text-align: center;
+            color: #fff;
+            padding: 20px 0;
+            background-color: none;
+            margin: 0;  
+        }
+        .libro a {
+           text-decoration: none;
+           color: #333;
+           padding: 5px 10px;
+           background-color: #eee;
+           border-radius: 5px;
+           text-align: center;
+           margin-top: 10px;
+        }
+
+         .libro a:hover {
+           background-color: #ddd; 
+        }
+
+        input#searchInput {
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+    
+    </style>
+
+<script>
+    function searchBooks() {
+        var input, filter, libros, libro, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        libros = document.getElementsByClassName("libro");
+
+        for (i = 0; i < libros.length; i++) {
+            libro = libros[i];
+            a = libro.getElementsByTagName("h2")[0];
+            txtValue = a.textContent || a.innerText;
+            
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                libro.style.display = "";
+            } else {
+                libro.style.display = "none";
+            }
+        }
+    }
+</script>
+</head>
+<body>
+
+    <h1>fisica</h1>
+    <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Buscar libros">
+
+    <div class="libro">
+        <div>
+            <img src="https://cuzcanoeditorial.com/wp-content/uploads/2021/10/lumciencias3.jpg" alt="Libro 1">
+            <h2>libro de fisica lumbreras</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/18mNF0lySkqCG6WbGPhKqjOzPaJ_s4mu8/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://imgv2-2-f.scribdassets.com/img/document/327780979/149x198/e1ef1a9435/1476639463?v=1" alt="Libro 2">
+            <h2>El postulante fisica</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1NsF86tcOPhMxIudB5USw-HhQDIYS21jF/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyhq5mC00UnPAqkMQX9BgV3zv6OegsaYt6OauxnZSTcR_GuSsN1ko6srdHuL7Dm290f2Q&usqp=CAU" alt="Libro 3">
+            <h2>Analisis dimensional y vectores de Meza Bravo</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1Jpq7qKXqSO1qaJyvYFSZOHV_B6ld--Yh/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZQ6eFfvB6zbnqSS2UXrshYgmaYVjsw47pCA&usqp=CAU" alt="Libro 4">
+            <h2>Dinamica teoria y problemas</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1Eu8A0P62fTvxcDmm9hpYFy95NLpUD67I/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <!-- Agrega más bloques 'libro' según sea necesario -->
+
+</body>
+</html>

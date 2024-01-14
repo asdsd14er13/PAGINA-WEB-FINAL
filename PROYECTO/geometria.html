@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjBkZSUyMGxhJTIwYmlibGlvdGVjYXxlbnwwfHwwfHx8MA%3D%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+		    font-weight: 400;
+		    font-size: 50px;
+		    margin-left: 10px;
+        }
+
+        .libro {
+           width: 50%;
+           max-width: 600px;
+           border-bottom: 1px solid #ccc;
+           margin: 10px;
+           padding: 10px;
+           box-sizing: border-box;
+           display:block;
+           margin:auto;
+           
+        }
+
+        .libro img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            display:block;
+            margin:auto;
+        }
+
+        .libro a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .libro a:hover {
+            background-color: #dddddd;
+        }
+        h2{
+            text-align: center;
+            color: #fff;
+            padding: 20px 0;
+            background-color: none;
+            margin: 0;  
+        }
+        .libro a {
+           text-decoration: none;
+           color: #333;
+           padding: 5px 10px;
+           background-color: #eee;
+           border-radius: 5px;
+           text-align: center;
+           margin-top: 10px;
+        }
+
+         .libro a:hover {
+           background-color: #ddd; 
+        }
+        input#searchInput {
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+
+<script>
+    function searchBooks() {
+        var input, filter, libros, libro, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        libros = document.getElementsByClassName("libro");
+
+        for (i = 0; i < libros.length; i++) {
+            libro = libros[i];
+            a = libro.getElementsByTagName("h2")[0];
+            txtValue = a.textContent || a.innerText;
+            
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                libro.style.display = "";
+            } else {
+                libro.style.display = "none";
+            }
+        }
+    }
+</script>
+</head>
+<body>
+
+    <h1>Geometria</h1>
+    <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Buscar libros">
+
+    <div class="libro">
+        <div>
+            <img src="https://online.fliphtml5.com/xqiuy/iceh/files/large/1.jpg?1547850794" alt="Libro 1">
+            <h2>Zona de cachimbos geometria</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1iNizFpGSYwtdEAcn4CSkUyCMsynbecME/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://www.elsaber21.com/wp-content/uploads/2017/07/geometria-carlos-ivorra-castillo.jpg" alt="Libro 2">
+            <h2>Carlos Ivorra Castillo Geometria</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/17xN8SQHUkriLsmhx1NRifH3nFKtien0U/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://dojiw2m9tvv09.cloudfront.net/40745/product/coleccion_ciencias_geometria_plana2812.jpg" alt="Libro 3">
+            <h2>Geometria plana editorial lumbreras</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1isRYiGccpvXYWztua5g8svkqFInXY-kz/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://lh3.googleusercontent.com/proxy/lrbhNwdxUA7d96bAPNuVQ8HLPzUaKI2xwgEZnIYdMuy0RCbnUUdDYyLkMKjebuQA81UTNT-4fdFv57hoz4gzPGI5Dzxkn2LmTyw5_5NSsDZuxYIOHMWqI9xUUJHDunE" alt="Libro 4">
+            <h2>Geometria escencial editorial lumbreras</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1BEtDr9S53oSUNPa68lRlxm8MXsHvVG7m/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <!-- Agrega más bloques 'libro' según sea necesario -->
+
+</body>
+</html>

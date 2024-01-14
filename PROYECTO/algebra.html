@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjBkZSUyMGxhJTIwYmlibGlvdGVjYXxlbnwwfHwwfHx8MA%3D%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+		    font-weight: 400;
+		    font-size: 50px;
+		    margin-left: 10px;
+        }
+
+        .libro {
+           width: 50%;
+           max-width: 600px;
+           border-bottom: 1px solid #ccc;
+           margin: 10px;
+           padding: 10px;
+           box-sizing: border-box;
+           display:block;
+           margin:auto;
+           
+        }
+
+        .libro img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            display:block;
+            margin:auto;
+        }
+
+        .libro a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .libro a:hover {
+            background-color: #dddddd;
+        }
+        h2{
+            text-align: center;
+            color: #fff;
+            padding: 20px 0;
+            background-color: none;
+            margin: 0;  
+        }
+        .libro a {
+           text-decoration: none;
+           color: #333;
+           padding: 5px 10px;
+           background-color: #eee;
+           border-radius: 5px;
+           text-align: center;
+           margin-top: 10px;
+        }
+
+         .libro a:hover {
+           background-color: #ddd; 
+        }
+
+        input#searchInput {
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+
+<script>
+    function searchBooks() {
+        var input, filter, libros, libro, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        libros = document.getElementsByClassName("libro");
+
+        for (i = 0; i < libros.length; i++) {
+            libro = libros[i];
+            a = libro.getElementsByTagName("h2")[0];
+            txtValue = a.textContent || a.innerText;
+            
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                libro.style.display = "";
+            } else {
+                libro.style.display = "none";
+            }
+        }
+    }
+</script>
+</head>
+<body>
+
+    <h1>Algebra</h1>
+    <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Buscar libros">
+
+    <div class="libro">
+        <div>
+            <img src="escencial lumbreras algebra.jpg" alt="Libro 1">
+            <h2>libro escencial de lumbreras</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1KzDZnb11jZJU38ZiMULH6sZ2MXZfeyUo/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="algebra-baldor.jpg" alt="Libro 2">
+            <h2>Algebra de A.Baldor</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1xmPzRraqnYnrnENVPMZSNQwTKr3p2eC7/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="manual practicas y ejercicios.webp" alt="Libro 3">
+            <h2>Manual de practicas y ejercicios</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1piXVNvTDVNyeTt-3jWaJj70BOYlsfMdt/view">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="algebra_coleccion_el_postulante_freelibrosorg.jpg" alt="Libro 4">
+            <h2>Coleccion el postulante</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1kMznyZn3cf3m2CkM-qgmcGnM0yHrVdXd/view">Ver libro</a>
+    </div>
+    <!-- Agrega más bloques 'libro' según sea necesario -->
+
+</body>
+</html>

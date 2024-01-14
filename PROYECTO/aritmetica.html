@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritmetica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjBkZSUyMGxhJTIwYmlibGlvdGVjYXxlbnwwfHwwfHx8MA%3D%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+		    font-weight: 400;
+		    font-size: 50px;
+		    margin-left: 10px;
+        }
+
+        .libro {
+           width: 50%;
+           max-width: 600px;
+           border-bottom: 1px solid #ccc;
+           margin: 10px;
+           padding: 10px;
+           box-sizing: border-box;
+           display:block;
+           margin:auto;
+           
+        }
+
+        .libro img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            display:block;
+            margin:auto;
+        }
+
+        .libro a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .libro a:hover {
+            background-color: #dddddd;
+        }
+        h2{
+            text-align: center;
+            color: #fff;
+            padding: 20px 0;
+            background-color: none;
+            margin: 0;  
+        }
+        .libro a {
+           text-decoration: none;
+           color: #333;
+           padding: 5px 10px;
+           background-color: #eee;
+           border-radius: 5px;
+           text-align: center;
+           margin-top: 10px;
+        }
+
+         .libro a:hover {
+           background-color: #ddd; 
+        }
+        input#searchInput {
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function searchBooks() {
+            var input, filter, libros, libro, a, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            libros = document.getElementsByClassName("libro");
+    
+            for (i = 0; i < libros.length; i++) {
+                libro = libros[i];
+                a = libro.getElementsByTagName("h2")[0];
+                txtValue = a.textContent || a.innerText;
+                
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    libro.style.display = "";
+                } else {
+                    libro.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Aritmetica</h1>
+    <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Buscar libros">
+
+    <div class="libro">
+        <div>
+            <img src="Aritmética 2012 – Rubiños-FREELIBROS.jpg" alt="Libro 1">
+            <h2>libro Rubiños teoria y practica</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1VeFv1iruc09tBsRkFO-GdluL1y0mCjGN/view">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="aritmetica rubazz.webp" alt="Libro 2">
+            <h2>Libro de Lumbreras Aritmetica</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1k1pSPq6TUjp9HPvAiaL3i67TIo1l-rwJ/view">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://d20ohkaloyme4g.cloudfront.net/img/document_thumbnails/f0ceaec1d4e96a645c475cb71a4e4c1a/thumb_300_392.png" alt="Libro 3">
+            <h2>Coleccion el postulante</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1aydqtgZB3RZcCCpXfSffN2eNSDmUhk5q/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <div class="libro">
+        <div>
+            <img src="https://cdn-v1.udocz-assets.com/uploads/book/cover/460499/460499.jpg" alt="Libro 4">
+            <h2>Manual de practicas y ejercicios</h2>
+        </div>
+        <a href="https://drive.google.com/file/d/1r-64K-ozJurdtR2n3Tc0-SuOqXLmclJV/view?usp=sharing">Ver libro</a>
+    </div>
+
+    <!-- Agrega más bloques 'libro' según sea necesario -->
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	body{
+		background: url(https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjBkZSUyMGxhJTIwYmlibGlvdGVjYXxlbnwwfHwwfHx8MA%3D%3D);
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+	.container{
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:100px;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	/*Fin de Menù lateral*/
+    /* estilos para los section */
+
+/* Estilos para las secciones */
+
+
+section {
+	background: rgba(255, 255, 255, 0.918);
+	padding: 20px;
+	margin: 80px 0; /* Ajusta el margen superior según tu preferencia */
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center; /* Centra el contenido */
+  }
+  
+  h2 {
+	color: #080303;
+	font-size: 40px;
+	margin-bottom: 50px;
+  }
+  
+  p {
+	color: #0a0a04;
+	font-size: 30px;
+  }
+  
+  /* Estilos específicos para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+	section {
+	  padding: 15px;
+	  margin: 60px 0; /* Ajusta el margen superior para dispositivos móviles */
+	}
+  }
+
+#inicio{
+	background: url(https://static.vecteezy.com/system/resources/previews/001/269/740/non_2x/close-up-of-a-person-studying-free-photo.jpg) no-repeat center;
+	background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    width: 100%;
+    height: 500px; /* Ajusta la altura según tus preferencias */
+    text-align: center; /* Ajusta la alineación del texto en el centro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#Nuestra_Misión{
+	background: url(https://media.istockphoto.com/id/918564940/es/foto/estudiantes-universitarios-con-emoci%C3%B3n-saltan-de-alegr%C3%ADa-despu%C3%A9s-de-la-ceremonia-de-graduaci%C3%B3n.jpg?s=612x612&w=0&k=20&c=8kkRnARob8x1Pz82nTN9jLd6HJXDxZqCWulnFBfsx9s=) no-repeat center;
+	background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    width: 100%;
+    height: 500px; /* Ajusta la altura según tus preferencias */
+    text-align: center; /* Ajusta la alineación del texto en el centro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+  
+#contacto{
+	background: url(https://img.freepik.com/fotos-premium/contactenos-empresario-sosteniendo-telefono-celular-correo-telefono-icono-correo-electronico-concepto-soporte-cutomer-usando-dispositivo-contactar-gente-o-contactarnos-mensajeria-llamando-al-correo-electronico-icono-grafico_256259-1238.jpg) no-repeat center;
+	background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    width: 100%;
+    height: 500px; /* Ajusta la altura según tus preferencias */
+    text-align: center; /* Ajusta la alineación del texto en el centro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
